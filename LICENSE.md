@@ -23,6 +23,56 @@ The Full (Paid) Edition of AuthKnock provides additional or identical functional
 - Redistribution of the Full edition without authorization is prohibited.
 - Using CE configuration files may be permitted, but **activation of Full features requires a valid license**.
 
-## 3. General
+## 3. License Agreement
 
 By using any release from this repository, you agree to comply with the terms above.
+
+## Editions Comparison
+
+| Feature / Functionality | Community Edition (CE) | Full (Subscription) |
+|-------------------------|:----------------------:|:-------------------:|
+| Core system | ✅ Included | ✅ Included |
+| Installation method | Shell script (`.sh`), user isolation | Web-based installer (GUI), optional Docker image |
+| Authorization methods | Multiple methods | Multiple methods |
+| Two-Factor Authentication (2FA/MFA) | ✅ Included | ✅ Included |
+| Service management | Basic Web UI | Advanced Web UI |
+| Themes / UI skins | Single default theme | Multiple themes |
+| Configuration management | Manual YAML file editing | Full configuration editor in Web UI |
+| Configuration reload | Manual reload via script | Automatic reload (no restart required) |
+| Auto-discovery of services | ❌ Not available | ✅ Available |
+| Notifications | Email, Telegram | Email, Telegram + built-in SMTP server |
+| Audit logs & change history | ❌ Limited / none | ✅ Full audit logs |
+| Backup & restore | ❌ Not available | ✅ Available via Web UI |
+| User and role management | Basic | Advanced (GUI-based) |
+| Active Directory (AD DS) automation | ❌ Not available | ✅ Automatic group creation and sync |
+| MySQL automation | ❌ Not available | ✅ Automatic database and role creation |
+| Deployment options | Manual installation | Docker image + Web installer |
+| Automatic updates | ❌ Not available | ✅ Automatic minor updates |
+| Monthly feature updates | ❌ Not available | ✅ Regular small updates (monthly) |
+| Support | Community support only | SLA-based support (≤48h response) |
+| License type | Free & Open Source | Paid annual subscription |
+
+---
+
+## Subscription Model (Full Edition)
+
+The **Full** edition is distributed under a commercial subscription model.
+
+- Pricing: **299 PLN / year**
+- Includes:
+  - All Full features
+  - Automatic minor updates
+  - Monthly small feature and improvement releases
+  - SLA-based support (email / ticket system)
+- A valid license key is required during installation or activation.
+
+A free trial period (7–14 days) may be available.
+
+---
+
+## Notes
+
+- The **Community Edition (CE)** is free to use, modify, and redistribute under the terms
+  of the open-source license defined in this repository.
+- The **Full Edition** requires a valid subscription and license key.
+- Configuration formats between CE and Full are intentionally kept compatible.

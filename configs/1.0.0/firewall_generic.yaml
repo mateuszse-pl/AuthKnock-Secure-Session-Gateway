@@ -1,0 +1,18 @@
+#IMPORTANT INFO: The AuthKnock creator (Mateusz Serafiński) does not provide 100% secure or bug-free software.
+
+#By using AuthKnock you agree that you are using it at your own risk. The author is not responsible for any damage caused by using this software.
+
+#This software is provided "as is" without any guarantees or warranty.
+
+#This file can't be seen by the users that aren't administrators for security reasons. If the file is visible to non-admin users, please report a security issue, because the installation script should prevent this from happening.
+
+#AuthKnock is not taking any of your data, but if you want to be safe, use a service account with minimal permissions.
+
+#The creator of AuthKnock (Mateusz Serafiński) is not connected with any third-party services used in this software. So report bugs only to at the official AuthKnock channels.
+type: "windows_defender" # nftables / iptables / ufw / firewalld / firewallcmd / any Linux-compatible firewall / windows_defender
+interfaces: "eth0" # put comma-separated list of interfaces to apply rules on, or "any" for all interfaces
+chain: "INPUT"
+rules:
+  - protocol: "tcp"
+    action: "ACCEPT"
+    comment_tag: "AUTH_KNOCK_ID"

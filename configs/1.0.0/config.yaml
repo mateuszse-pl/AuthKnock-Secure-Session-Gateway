@@ -1,0 +1,38 @@
+#IMPORTANT INFO: The AuthKnock creator (Mateusz Serafiński) does not provide 100% secure or bug-free software.
+#By using AuthKnock you agree that you are using it at your own risk. The author is not responsible for any damage caused by using this software.
+#This software is provided "as is" without any guarantees or warranty.
+#This file can't be seen by the users that aren't administrators for security reasons. If the file is visible to non-admin users, please report a security issue, because the installation script should prevent this from happening.
+#AuthKnock Session Security Gateway Configuration File
+# Change the values and then run the config generator script to generate the final config files. DO NOT MAKE FILES MANUALLY.
+repo_url: "https://raw.githubusercontent.com/mateuszse-pl/AuthKnock-Secure-Session-Gateway/refs/heads/main/" #Official repository URL for updates and config generation, don't change unless you are using a custom fork.
+version: "1.0.0" # DON NOT CHANGE THIS VALUE UNLESS YOU KNOW WHAT YOU ARE DOING OR THE OFFICIAL ERROR SOLUTION PROVIDED BY THE AuthKnock REQUIRES IT.
+lang: "pl" # pl/en/de (These are the only supported)
+auth:
+  type: "yaml" # ad_ds -> auth_ad.yaml / mysql -> auth_mysql.yaml / sys_auth -> auth_sysauth.yaml / yaml -> auth_yaml.yaml
+  allowed_groups: ["admins"] # group for ad_ds/ value for mysql / system group for sys_auth / yaml parameter for yaml
+notifications:
+  enabled: true
+  provider: "email" # email -> notify_email.yaml / telegram -> notify_telegram.yaml
+  notify_on_groups: ["ADMINS", "DEVS"]
+  notify_on_individuals: ["mateuszse"]
+  notify_on_events: ["LOGIN_SUCCESS", "LOGIN_FAILURE", "LOGOUT"]
+firewall:
+  provider: "generic" # pfsense -> firewall_pfsense.yaml / generic -> firewall_generic.yaml / opnsense -> firewall_opnsense.yaml
+  dynamic_alias: "AUTH_KNOCK_ALLOWED_IPS"
+#If you don't know what you are doing, don't change below this line, edit the services trough the web interface on admin panel
+#-----------------------------------------------------------------------------------------------------------------------------------
+services:
+  - id: "srv_mc"
+    name: "Minecraft Server"
+    icon: "🎮"
+    target_ip: "10.0.0.10"
+    port: 25565
+    allowed_groups: ["gamers", "admins"] # group for ad_ds/ value for mysql / system group for sys_auth / yaml parameter for yaml
+    require_admin_approval: false
+  - id: "srv_ssh"
+    name: "Produkcja SSH"
+    icon: "💻"
+    target_ip: "10.0.0.20"
+    port: 22
+    allowed_groups: ["admins"] # group for ad_ds/ value for mysql / system group for sys_auth / yaml parameter for yaml
+    require_admin_approval: true # If true, an admin must approve each login attempt

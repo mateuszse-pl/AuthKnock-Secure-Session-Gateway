@@ -1,0 +1,111 @@
+#IMPORTANT INFO: The AuthKnock creator (Mateusz Serafiński) does not provide 100% secure or bug-free software.
+
+#By using AuthKnock you agree that you are using it at your own risk. The author is not responsible for any damage caused by using this software.
+
+#This software is provided "as is" without any guarantees or warranty.
+
+#This file can't be seen by the users that aren't administrators for security reasons. If the file is visible to non-admin users, please report a security issue, because the installation script should prevent this from happening.
+
+#AuthKnock is not taking any of your data, but if you want to be safe, use a service account with minimal permissions.
+
+#The creator of AuthKnock (Mateusz Serafiński) is not connected with any third-party services used in this software. So report bugs only to at the official AuthKnock channels.
+
+#SMTP setup (works for local SMTP servers and popular providers like Gmail, Outlook, SendGrid, etc.)
+
+smtp_settings:
+
+  host: "smtp.gmail.com"        # server adress (np. smtp.gmail.com for gmail)
+
+  port: 587                     # 587 (STARTTLS) lub 465 (SSL/TLS)
+
+  encryption: "starttls"        # ssl/tls / starttls / none
+
+  timeout: 10                   # timeout in seconds
+
+
+
+  # --- AUTHENTICATION ---
+
+  auth:
+
+    enabled: true
+
+    # for Gmail/Google: Full email address used for login
+
+    username: "serafinski.mati@gmail.com"
+
+    # for Gmail/Google: Generated "App Password" (16 characters), not account password!
+
+    password: "wbshcevycasijapp" 
+
+
+
+# --- Sender and Recipients ---
+
+delivery:
+
+  from_name: "AuthKnock Secure Session Gateway"
+
+  from_email: "serafinski.mati@gmail.com"
+
+  reply_to: "serafinski.mati@gmail.com"
+
+  
+
+  # Lista administratorów otrzymujących prośby o dostęp
+
+  admin_recipients:
+
+    - "serafinski.mati@gmail.com"
+
+#    - "admin.team@twojadomena.pl"
+
+
+
+# --- PERSONALIZACJA POWIADOMIEŃ ---
+
+content:
+
+  high_priority_flag: true      # Set to true to mark emails as high priority
+
+  include_ip_location: true     # Set to true to include IP geolocation info (if available)
+
+  
+
+  # Templates for email subjects and bodies
+
+  #FOR EN/DE VERSION PLEASE TRANSLATE THE VALUES IF YOU NEED TO, THIS IS THE POLISH VERSION.
+
+  # Fur EN/DE VERSION BITTE DIE WERTE ÜBERSETZEN, WENN SIE SIE BENÖTIGEN, DAS IST DIE POLNISCHE VERSION.
+
+  templates:
+    subject_request: "🔴 PROŚBA O DOSTĘP: {user} -> {service}"
+    subject_ok: "✅ DOSTĘP ZATWIERDZONY: {user} -> {service}"
+    subject_alert: "⚠️ WYKRYTO ZDARZENIE: {user} -> {service}"
+    subject_denied: "❌ DOSTĘP ODRZUCONY: {user} -> {service}"
+    
+
+    # HTML body layout
+
+    html_body_layout: |
+
+      <div style="font-family: sans-serif; border: 1px solid #ddd; padding: 20px;">
+
+        <h2 style="color: #d32f2f;">Powiadomienie</h2>
+
+        <p><b>Użytkownik:</b> {user}</p>
+
+        <p><b>Usługa:</b> {service}</p>
+
+        <p><b>Adres IP:</b> {ip}</p>
+
+        <p><b>Czas:</b> {timestamp}</p>
+        <p><b>Szczegóły:</b><br>{message}</p>
+        <hr>
+
+        <p>Zaloguj się do panelu administratora, aby sprawdzić szczegóły oraz zatwierdzić lub odrzucić dostęp jeżeli jest to usługa i tego wymaga.</p>
+        <hr>
+        <div style="font-size: 0.9em; color: #555;">
+          <p>To jest automatyczne powiadomienie z systemu AuthKnock Secure Session Gateway.</p>
+          <p>Nie odpowiadaj na tę wiadomość.</p>
+      </div>

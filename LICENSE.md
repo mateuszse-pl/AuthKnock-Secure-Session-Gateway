@@ -1,3 +1,4 @@
+![AuthKnock Logo](./logo.png)
 # AuthKnock License
 
 Copyright (c) 2025 Mateusz Serafiński

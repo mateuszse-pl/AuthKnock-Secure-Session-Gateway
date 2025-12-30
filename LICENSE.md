@@ -50,6 +50,6 @@ By using any release from this repository, you agree to comply with the terms ab
 | Automatic updates | ❌ Not available | ✅ Automatic minor updates |
 | Monthly feature updates | ❌ Not available | ✅ Regular small updates (monthly) |
 | Support | Community support only | SLA-based support (≤48h response) |
-| License type | Free & Open Source | Paid annual subscription |
+| License type | Free & Open Source | Yearly / Monthly subsription |
 
 ---

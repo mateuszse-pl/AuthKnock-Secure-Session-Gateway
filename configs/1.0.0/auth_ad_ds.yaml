@@ -1,0 +1,19 @@
+#IMPORTANT INFO: The AuthKnock creator (Mateusz Serafiński) does not provide 100% secure or bug-free software.
+#By using AuthKnock you agree that you are using it at your own risk. The author is not responsible for any damage caused by using this software.
+#This software is provided "as is" without any guarantees or warranty.
+#This file can't be seen by the users that aren't administrators for security reasons. If the file is visible to non-admin users, please report a security issue, because the installation script should prevent this from happening.
+#AuthKnock is not taking any of your data, but if you want to be safe, use a service account with minimal permissions.
+#The creator of AuthKnock (Mateusz Serafiński) is not connected with any third-party services used in this software like Microsoft. So report bugs only to at the official AuthKnock channels.
+#Configuration for Active Directory Domain Services or LDAP / Kerberos authentication
+server: "ldaps://dc1.twojadomena.local:636"
+bind_dn: "CN=ServiceAccount,OU=ServiceUsers,DC=twojadomena,DC=local"
+bind_password: "SuperSecretPassword123"
+user_search_base: "OU=Users,DC=twojadomena,DC=local"
+group_search_base: "OU=Groups,DC=twojadomena,DC=local"  
+user_filter: "(&(objectClass=user)(sAMAccountName={username}))"
+group_filter: "(member={user_dn})"
+# map AD DS / LDAP groups to AuthKnock roles
+group_mapping:
+  "CN=AuthKnock_Admins,OU=Groups,DC=local": "admin"
+  "CN=AuthKnock_Users,OU=Groups,DC=local": "user"
+  "CN=AuthKnock_Helpdesk,OU=Groups,DC=local": "AuthKnock_helpdesk"

@@ -33,7 +33,7 @@ By using any release from this repository, you agree to comply with the terms ab
 |-------------------------|:----------------------:|:-------------------:|
 | Core system | ✅ Included | ✅ Included |
 | Installation method | Shell script (`.sh`), user isolation | Web-based installer (GUI), optional Docker image |
-| Authorization methods | Multiple methods | Multiple methods |
+| Authorization methods |  AD DS, MySQL, Local system, YAML file | AD DS, MySQL, Local system (YAML removed due the security reasons) |
 | Two-Factor Authentication (2FA/MFA) | ✅ Included | ✅ Included |
 | Service management | Basic Web UI | Advanced Web UI |
 | Themes / UI skins | Single default theme | Multiple themes |
@@ -42,10 +42,10 @@ By using any release from this repository, you agree to comply with the terms ab
 | Auto-discovery of services | ❌ Not available | ✅ Available |
 | Notifications | Email, Telegram | Email, Telegram + built-in SMTP server |
 | Audit logs & change history | ❌ Limited / none | ✅ Full audit logs |
-| Backup & restore | ❌ Not available | ✅ Available via Web UI |
+| Backup & restore | Scripts | Available via Web UI |
 | User and role management | Basic | Advanced (GUI-based) |
-| Active Directory (AD DS) automation | ❌ Not available | ✅ Automatic group creation and sync |
-| MySQL automation | ❌ Not available | ✅ Automatic database and role creation |
+| Active Directory (AD DS) automatic scripts | ❌ Not available | ✅ Automatic group creation and sync |
+| MySQL automatic scripts | ❌ Not available | ✅ Automatic database and role creation |
 | Deployment options | Manual installation | Docker image + Web installer |
 | Automatic updates | ❌ Not available | ✅ Automatic minor updates |
 | Monthly feature updates | ❌ Not available | ✅ Regular small updates (monthly) |

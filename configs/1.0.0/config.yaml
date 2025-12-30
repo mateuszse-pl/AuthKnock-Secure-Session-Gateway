@@ -13,7 +13,7 @@ auth:
 notifications:
   enabled: true
   provider: "email" # email -> notify_email.yaml / telegram -> notify_telegram.yaml
-  notify_on_groups: ["ADMINS", "DEVS"]
+  notify_on_groups: ["Admin", "Devs"]
   notify_on_individuals: ["mateuszse"]
   notify_on_events: ["LOGIN_SUCCESS", "LOGIN_FAILURE", "LOGOUT"]
 firewall:
@@ -35,4 +35,5 @@ services:
     target_ip: "10.0.0.20"
     port: 22
     allowed_groups: ["admins"] # group for ad_ds/ value for mysql / system group for sys_auth / yaml parameter for yaml
+
     require_admin_approval: true # If true, an admin must approve each login attempt

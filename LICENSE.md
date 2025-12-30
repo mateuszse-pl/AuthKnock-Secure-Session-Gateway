@@ -53,26 +53,3 @@ By using any release from this repository, you agree to comply with the terms ab
 | License type | Free & Open Source | Paid annual subscription |
 
 ---
-
-## Subscription Model (Full Edition)
-
-The **Full** edition is distributed under a commercial subscription model.
-
-- Pricing: **299 PLN / year**
-- Includes:
-  - All Full features
-  - Automatic minor updates
-  - Monthly small feature and improvement releases
-  - SLA-based support (email / ticket system)
-- A valid license key is required during installation or activation.
-
-A free trial period (7–14 days) may be available.
-
----
-
-## Notes
-
-- The **Community Edition (CE)** is free to use, modify, and redistribute under the terms
-  of the open-source license defined in this repository.
-- The **Full Edition** requires a valid subscription and license key.
-- Configuration formats between CE and Full are intentionally kept compatible.

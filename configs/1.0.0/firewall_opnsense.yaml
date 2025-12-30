@@ -1,0 +1,16 @@
+#IMPORTANT INFO: The AuthKnock creator (Mateusz Serafiński) does not provide 100% secure or bug-free software.
+#By using AuthKnock you agree that you are using it at your own risk. The author is not responsible for any damage caused by using this software.
+#This software is provided "as is" without any guarantees or warranty.
+#This file can't be seen by the users that aren't administrators for security reasons. If the file is visible to non-admin users, please report a security issue, because the installation script should prevent this from happening.
+#AuthKnock is not taking any of your data, but if you want to be safe, use a service account with minimal permissions.
+#The creator of AuthKnock (Mateusz Serafiński) is not connected with any third-party services used in this software like OPNsense. So report bugs only to at the official AuthKnock channels.
+connection:
+  url: "https://192.168.1.1/api"
+  api_key: "key_here"
+  api_secret: "secret_here"
+  verify_ssl: false
+settings:
+  # Aliases for recognizing AuthKnock decisions
+  alias_name: "AUTH_KNOCK_ALLOWED"
+  # OPNsense firewall requires applying changes after modifying firewall rules
+  auto_apply: true

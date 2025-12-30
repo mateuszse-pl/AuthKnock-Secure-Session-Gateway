@@ -1,5 +1,5 @@
-![AuthKnock Logo](./logo.png)
-# AuthKnock License
+![AuthKnock Logo](./logo-dots.png)
+# AuthKnock Secure Session Gateway License
 
 Copyright (c) 2025 Mateusz Serafiński
 

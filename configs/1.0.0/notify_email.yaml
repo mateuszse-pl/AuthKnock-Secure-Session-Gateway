@@ -83,6 +83,7 @@ content:
     subject_ok: "✅ DOSTĘP ZATWIERDZONY: {user} -> {service}"
     subject_alert: "⚠️ WYKRYTO ZDARZENIE: {user} -> {service}"
     subject_denied: "❌ DOSTĘP ODRZUCONY: {user} -> {service}"
+    subject_error: "❗ BŁĄD SYSTEMU: {user} -> {service}"
     
 
     # HTML body layout

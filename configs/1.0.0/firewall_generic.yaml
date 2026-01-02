@@ -10,9 +10,7 @@
 
 #The creator of AuthKnock (Mateusz Serafiński) is not connected with any third-party services used in this software. So report bugs only to at the official AuthKnock channels.
 type: "windows_defender" # nftables / iptables / ufw / firewalld / firewallcmd / any Linux-compatible firewall / windows_defender
-interfaces: "eth0" # put comma-separated list of interfaces to apply rules on, or "any" for all interfaces
+interfaces: "eth0" # put comma-separated list of interfaces to apply rules on, or "any" for all interfaces / only for Linux firewalls
 chain: "INPUT"
 rules:
-  - protocol: "tcp"
-    action: "ACCEPT"
     comment_tag: "AUTH_KNOCK_ID"
